@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="Кухня css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Кухни</title>
+</head>
+<body>
+    <div class = "links">
+        <a class = "button" href="Шкафы.html">Шкафы</a>
+        <a class = "button" href="Тумбочки и полки.html">Тумбочки и полки</a>
+        <a class = "button" href = "#bottom">Контакты</a>
+    </div>
+    <h1 class="funny-title section-title">Кухни</h1>
+        <p class = "text">
+            Кухонный гарнитур по Вашим размерам
+        </p>
+
+        <div class="slideshow-container">
+            <div class="mySlides1">
+                <img class = "normal" src="img/kitchens/kitchen white.jpeg">
+            </div>
+
+            <div class="mySlides1">
+                <img class = "fix_size" src="img/kitchens/kitchen white 1.jpeg">
+            </div>
+
+            <div class="mySlides1">
+                <img class = "normal" src="img/kitchens/kitchen white 2.jpeg">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 0)">❮</a>
+            <a class="next" onclick="plusSlides(1, 0)">❯</a>
+        </div>
+
+        <div class="slideshow-container">
+            <div class="mySlides2">
+                <img class = "normal" src="img/kitchens/kitchen brown.jpeg">
+            </div>
+
+            <div class="mySlides2">
+                <img class = "fix_size" src="img/kitchens/kitchen brown1.jpeg">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 1)">❮</a>
+            <a class="next" onclick="plusSlides(1, 1)">❯</a>
+        </div>
+
+        <script>
+            var slideIndex = [1,1];
+            var slideId = ["mySlides1", "mySlides2"]
+            showSlides(1, 0);
+            showSlides(1, 1);
+
+            function plusSlides(n, no) {
+                showSlides(slideIndex[no] += n, no);
+            }
+
+            function showSlides(n, no) {
+                var i;
+                var x = document.getElementsByClassName(slideId[no]);
+                if (n > x.length) {slideIndex[no] = 1}    
+                if (n < 1) {slideIndex[no] = x.length}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                x[slideIndex[no]-1].style.display = "block";  
+            }
+        </script>
+        <img class = "nor_center" src="img/kitchens/kitchen grey fridge.jpeg">
+        <img class = "nor_center" src="img/kitchens/kitchen grey.jpeg">
+        <div class="line"></div>
+        <p class = "contacts">Телефон: +7(916)692-24-48</p>
+        <p class = "contacts">Вертьянов Юрий Михайлович</p>
+        <p class = "contacts">ИП Вертьянов Ю. М.</p>
+        <p class = "contacts">Россия, Московская обл.</p>
+        <a name = "bottom"></a>
+</body>
+</html> 

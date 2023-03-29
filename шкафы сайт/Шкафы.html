@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="Кухня css.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шкафы</title>
+</head>
+<body>
+    <div class = "links">
+        <a class = "button" href="Кухня.html">Кухни</a>
+        <a class = "button" href="Тумбочки и полки.html">Тумбочки и полки</a>
+        <a class = "button" href = "#bottom">Контакты</a>
+    </div> 
+    <h1 class="funny-title section-title">Шкафы</h1>
+    <div class="slideshow-container">
+        <div class="mySlides1">
+            <img class = "normal" src="img/closets/black closet3.jpg">
+        </div>
+
+        <div class="mySlides1">
+            <img class = "normal1" src="img/closets/black closet1.jpg">
+        </div>
+
+        <div class="mySlides1">
+            <img class = "normal1" src="img/closets/black closet2.jpg">
+        </div>
+
+        <div class="mySlides1">
+            <img class = "normal1" src="img/closets/black closet.jpg">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 0)">❮</a>
+        <a class="next" onclick="plusSlides(1, 0)">❯</a>
+    </div>
+
+    <div class="slideshow-container1">
+        <div class="mySlides2">
+            <img class = "normal2" src="img/closets/white closet and work place.jpg">
+        </div>
+
+        <div class="mySlides2">
+            <img class = "normal2" src="img/closets/white closet and work place1.jpg">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 1)">❮</a>
+        <a class="next" onclick="plusSlides(1, 1)">❯</a>
+    </div>
+
+    <div class="slideshow-container1">
+        <div class="mySlides3">
+            <img class = "normal2" src="img/closets/white closet.jpg">
+        </div>
+
+        <div class="mySlides3">
+            <img class = "normal2" src="img/closets/white closet1.jpg">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 2)">❮</a>
+        <a class="next" onclick="plusSlides(1, 2)">❯</a>
+    </div>
+
+    <div class="slideshow-container1">
+        <div class="mySlides4">
+            <img class = "normal2" src="img/closets/light closet.jpg">
+        </div>
+
+        <div class="mySlides4">
+            <img class = "normal2" src="img/closets/light closet1.jpg">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 3)">❮</a>
+        <a class="next" onclick="plusSlides(1, 3)">❯</a>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="mySlides5">
+            <img class = "normal" src="img/closets/grey closet.jpg">
+        </div>
+
+        <div class="mySlides5">
+            <img class = "fix_size" src="img/closets/grey close1.jpg">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 4)">❮</a>
+        <a class="next" onclick="plusSlides(1, 4)">❯</a>
+    </div>
+
+    <div class="slideshow-container1">
+        <div class="mySlides6">
+            <img class = "normal2" src="img/closets/white blue closet.jpg">
+        </div>
+
+        <div class="mySlides6">
+            <img class = "normal2" src="img/closets/white blue closet1.jpg">
+        </div>
+
+        <div class="mySlides6">
+            <img class = "normal2" src="img/closets/white blue closet2.jpg">
+        </div>
+
+        <div class="mySlides6">
+            <img class = "normal2" src="img/closets/white blue closet3.jpg">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 5)">❮</a>
+        <a class="next" onclick="plusSlides(1, 5)">❯</a>
+    </div>
+
+    <div class="slideshow-container1">
+        <div class="mySlides7">
+            <img class = "normal2" src="img/closets/mirror closet.jpg">
+        </div>
+
+        <div class="mySlides7">
+            <img class = "normal2" src="img/closets/mirror closet1.jpg">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 6)">❮</a>
+        <a class="next" onclick="plusSlides(1, 6)">❯</a>
+    </div>
+
+    <script>
+        var slideIndex = [1,1,1,1,1,1,1];
+        var slideId = ["mySlides1", "mySlides2", "mySlides3","mySlides4", "mySlides5", "mySlides6","mySlides7"]
+        showSlides(1, 0);
+        showSlides(1, 1);
+        showSlides(1, 2);
+        showSlides(1, 3);
+        showSlides(1, 4);
+        showSlides(1, 5);
+        showSlides(1, 6);
+
+        function plusSlides(n, no) {
+            showSlides(slideIndex[no] += n, no);
+        }
+
+        function showSlides(n, no) {
+            var i;
+            var x = document.getElementsByClassName(slideId[no]);
+            if (n > x.length) {slideIndex[no] = 1}    
+            if (n < 1) {slideIndex[no] = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            x[slideIndex[no]-1].style.display = "block";  
+        }
+    </script>
+    <div class="line"></div>
+    <p class = "contacts">Телефон: +7(916)692-24-48</p>
+    <p class = "contacts">Вертьянов Юрий Михайлович</p>
+    <p class = "contacts">ИП Вертьянов Ю. М.</p>
+    <p class = "contacts">Россия, Московская обл.</p>
+    <a name = "bottom"></a>
+</body>
+</html>
